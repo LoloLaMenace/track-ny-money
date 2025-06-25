@@ -4,6 +4,7 @@ namespace App\Rest\Resources;
 
 use App\Models\User;
 use App\Rest\Resources\Resource;
+use Lomkit\Rest\Relations\HasMany;
 
 class UserResource extends Resource
 {
@@ -35,7 +36,9 @@ class UserResource extends Resource
      */
     public function relations(\Lomkit\Rest\Http\Requests\RestRequest $request): array
     {
-        return [];
+        return [
+            HasMany::make('acounts', AcountResource::class),
+        ];
     }
 
     /**

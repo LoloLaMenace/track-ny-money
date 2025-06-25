@@ -17,7 +17,7 @@ class NecessaryExpenseFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'amount' => $this->faker->numberBetween( 0, 200),
         ];
     }
 }

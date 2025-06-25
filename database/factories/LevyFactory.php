@@ -17,7 +17,8 @@ class LevyFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'amount' => $this->faker->numberBetween( 5, 300),
+
         ];
     }
 }

@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('entries', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->decimal('amount', 15, 2);
+            $table->foreignIdFor(\App\Models\Acount::class);
         });
     }
 
